@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Calculadora</h1>
+    @using (Html.BeginForm()){
+        <table>
+            <tr>
+                <th> Numero 1: </th>
+                <td><input type="text" id="txtNumero1" name="numero1" class="form-control" /></td>
+            </tr>
+            <tr>
+                <th> Numero 2: </th>
+                <td><input type="text" id="txtNumero2" name="numero2" class="form-control" /></td>
+            </tr>
+            <tr>
+                <th><input type="submit" name="tipo" value="Suma" class="btn btn-primary" /></th>
+            </tr>
+            <tr>
+                <th>Resultado</th>
+                <td><input type="text" class="form-control" value="@ViewBag.Resultado" /></td>
+            </tr>
+        </table>
+    }
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
